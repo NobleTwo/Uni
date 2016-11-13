@@ -1,0 +1,73 @@
+#include <iostream>
+#include <fstream>
+#include <random>
+#include <ctime>
+#include <cmath>
+
+double samplingMethod(int numberOfSamples){
+	int a=0;
+	int b=1;
+	double sum_f_x = 0;
+	for(int i=0; i<numberOfSamples; i++){
+		double x = rand();
+		sum_f_x += pow(cos(1./x),2);
+	}
+	return (b-a)*sum_f_x/numberOfSamples;
+}
+
+double hitOrMiss(int numberOfSamples){
+	int a=0;
+	int b=1;
+	double max = 1;
+	double I_known = (b-a)*max;
+	int hit = 0;
+	for(int i=0; i<numberOfSamples; i++){
+		double x = rand();
+		double y = rand();
+		double f_x += pow(cos(1./x),2);
+		if(y<= f_x){
+			hit++;
+		}
+	}
+	return I_known*hit/numberOfSamples;
+}
+
+int main(){
+	srand(time(NULL));
+	std::cout << "Test";
+
+	ofstream file("values.txt");
+	for(int i=0; i<4; i++){
+		int numberOfSamples = pow(10,i);
+		int runsForVariance = 10;
+		double samplingMethod_mean = 0;
+		double samplingMethod_min = DBL_MAX;
+		double samplingMethod_max = -DBL_Max;
+
+		double hitOrMiss_mean = 0;
+		double hitOrMiss_min = DBL_MAX;
+		double hitOrMiss_max = -DBL_MAX;
+		for(int j; j<runsForVariance; j++){
+			double samp = samplingMethod(numberOfSamples);
+			samplingMethod_mean += samp;
+			if(samp<samplingMethod_min){
+				samplingMethod_min = samp;
+			}
+			if(samp>samplingMethod_max){
+				samplingMethod_max = samp;
+			}
+
+			double hOm = hitOrMiss(numberOfSamples);
+			hitOrMiss_mean += hOm;
+			if(hOm<hitOrMiss_min){
+				hitOrMiss_min = hOm;
+			}
+			if(hOm>hitOrMiss_max){
+				hitOrMiss_max = hOm;
+			}
+		}
+		file << numberOfSamples << "\t" << samplingMethod_mean/numberOfSamples << "\t" << samplingMethod_max-samplingMethod_min << "\t";
+		file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+	}
+	file.close();
+}

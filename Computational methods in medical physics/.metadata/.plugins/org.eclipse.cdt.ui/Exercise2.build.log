@@ -1,0 +1,26 @@
+09:54:13 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+
+09:54:13 Build Finished (took 69ms)
+

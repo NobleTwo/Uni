@@ -1,0 +1,2074 @@
+17:50:38 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+17:50:43 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+17:53:39 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:00:41 **** Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/HelloWorld.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/HelloWorld.d" -MT"src/HelloWorld.o" -o "src/HelloWorld.o" "../src/HelloWorld.cpp"
+Finished building: ../src/HelloWorld.cpp
+ 
+Building target: HelloWorld
+Invoking: Cross G++ Linker
+g++  -o "HelloWorld"  ./src/HelloWorld.o   
+Finished building target: HelloWorld
+ 
+18:01:32 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../integration.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+Finished building: ../integration.cpp
+ 
+Building target: Exercise1
+Invoking: Cross G++ Linker
+g++  -o "Exercise1"  ./integration.o   
+Finished building target: Exercise1
+ 
+19:31:49 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../integration.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘double hitOrMiss(int)’:
+../integration.cpp:28:14: error: expected initializer before ‘+=’ token
+   double f_x += pow(cos(1./x),2);
+              ^~
+../integration.cpp:29:10: error: ‘f_x’ was not declared in this scope
+   if(y<= f_x){
+          ^~~
+../integration.cpp:26:10: warning: unused variable ‘x’ [-Wunused-variable]
+   double x = rand();
+          ^
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+make: *** [integration.o] Error 1
+subdir.mk:18: recipe for target 'integration.o' failed
+19:31:50 **** Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+19:32:57 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../integration.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘double hitOrMiss(int)’:
+../integration.cpp:28:14: error: expected initializer before ‘+=’ token
+   double f_x += pow(cos(1./x),2);
+              ^~
+../integration.cpp:29:10: error: ‘f_x’ was not declared in this scope
+   if(y<= f_x){
+          ^~~
+../integration.cpp:26:10: warning: unused variable ‘x’ [-Wunused-variable]
+   double x = rand();
+          ^
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+subdir.mk:18: recipe for target 'integration.o' failed
+make: *** [integration.o] Error 1
+19:32:58 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+19:33:53 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../integration.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+Finished building: ../integration.cpp
+ 
+Building target: Exercise1
+Invoking: Cross G++ Linker
+g++  -o "Exercise1"  ./integration.o   
+Finished building target: Exercise1
+ 
+19:33:54 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+19:37:03 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:37:03 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+19:37:39 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+19:38:59 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "Cygwin GCC" that is unsupported on this system, attempting to build anyway.
+make all 
+Building file: ../integration.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+Finished building: ../integration.cpp
+ 
+Building target: Exercise1
+Invoking: Cygwin C++ Linker
+g++  -o "Exercise1"  ./integration.o   
+Finished building target: Exercise1
+ 
+19:39:00 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+19:39:49 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../integration.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+Finished building: ../integration.cpp
+ 
+Building target: Exercise1
+Invoking: GCC C++ Linker
+g++  -o "Exercise1"  ./integration.o   
+Finished building target: Exercise1
+ 
+19:39:50 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+19:40:18 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+19:40:19 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+19:55:03 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+19:55:04 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+19:55:07 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+19:57:02 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+19:57:05 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+20:03:55 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+20:04:03 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+20:04:08 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+20:07:22 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+20:07:26 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+20:07:40 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+20:07:56 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+20:08:07 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+20:08:08 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+20:08:51 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../integration.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+Finished building: ../integration.cpp
+ 
+Building target: Exercise1
+Invoking: GCC C++ Linker
+g++  -o "Exercise1"  ./integration.o   
+Finished building target: Exercise1
+ 
+20:08:52 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+20:08:53 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+20:08:54 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+20:08:54 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+20:08:54 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+20:08:54 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+20:08:55 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+20:09:01 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+20:09:02 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+20:09:35 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../integration.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+Finished building: ../integration.cpp
+ 
+Building target: Exercise1
+Invoking: Cross G++ Linker
+g++  -o "Exercise1"  ./integration.o   
+Finished building target: Exercise1
+ 
+20:09:36 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+ ^
+make: *** [importance_sampling.o] Error 1
+20:09:56 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "Cygwin GCC" that is unsupported on this system, attempting to build anyway.
+make all 
+Building file: ../integration.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+Finished building: ../integration.cpp
+ 
+Building target: Exercise1
+Invoking: Cygwin C++ Linker
+g++  -o "Exercise1"  ./integration.o   
+Finished building target: Exercise1
+ 
+20:09:57 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+20:11:08 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../integration.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"integration.d" -MT"integration.o" -o "integration.o" "../integration.cpp"
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+Finished building: ../integration.cpp
+ 
+Building target: Exercise1
+Invoking: GCC C++ Linker
+g++  -o "Exercise1"  ./integration.o   
+Finished building target: Exercise1
+ 
+20:11:09 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+20:11:15 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+make: Nothing to be done for 'all'.
+20:11:15 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+ ^
+make: *** [importance_sampling.o] Error 1
+20:11:47 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+20:11:48 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+20:14:08 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+20:14:09 **** Build of configuration Debug for project Test ****
+make all 
+Building file: ../test.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.o" -o "test.o" "../test.cpp"
+../test.cpp: In function ‘int main()’:
+../test.cpp:4:2: error: ‘cou’ is not a member of ‘std’
+  std::cou << "Test";
+  ^~~
+subdir.mk:18: recipe for target 'test.o' failed
+make: *** [test.o] Error 1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+20:15:27 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+20:15:30 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+09:18:36 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+09:19:24 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:19:27 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:71:36: error: invalid operands of types ‘int’ and ‘const char [2]’ to binary ‘operator<<’
+   std::string s =  numberOfSamples << "\t" << samplingMethod_mean/numberOfSamples << "\t" << samplingMethod_max-samplingMethod_min << "\t";
+                    ~~~~~~~~~~~~~~~~^~~~~~~
+../integration.cpp:73:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+09:20:11 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:71:36: error: invalid operands of types ‘int’ and ‘const char [2]’ to binary ‘operator<<’
+   std::string s =  numberOfSamples << "\t" << samplingMethod_mean/numberOfSamples << "\t" << samplingMethod_max-samplingMethod_min << "\t";
+                    ~~~~~~~~~~~~~~~~^~~~~~~
+../integration.cpp:73:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+09:20:12 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:20:14 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:71:43: error: invalid operands of types ‘const char*’ and ‘double’ to binary ‘operator+’
+   std::string s =  numberOfSamples + "\t" + samplingMethod_mean/numberOfSamples + "\t" + samplingMethod_max-samplingMethod_min + "\t";
+                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../integration.cpp:73:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+09:21:22 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:71:43: error: invalid operands of types ‘const char*’ and ‘double’ to binary ‘operator+’
+   std::string s =  numberOfSamples + "\t" + samplingMethod_mean/numberOfSamples + "\t" + samplingMethod_max-samplingMethod_min + "\t";
+                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../integration.cpp:73:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+09:21:23 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:21:32 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:73:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:22:12 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:22:16 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:72:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:73:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:23:13 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:23:16 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:73:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:74:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:24:46 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:24:49 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:73:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:74:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+09:25:11 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:73:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:74:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+09:25:12 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+09:25:49 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:25:51 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:73:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:74:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+09:28:18 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:28:20 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘double hitOrMiss(int)’:
+../integration.cpp:34:19: error: expected ‘;’ before ‘std’
+  std::cout << hit std::endl;
+                   ^~~
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:74:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:75:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+09:28:35 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘double hitOrMiss(int)’:
+../integration.cpp:34:19: error: expected ‘;’ before ‘std’
+  std::cout << hit std::endl;
+                   ^~~
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:74:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:75:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+09:28:36 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+09:28:37 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:74:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:75:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+09:31:03 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:74:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:75:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+09:31:35 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:31:37 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:74:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:75:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:32:25 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:32:27 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+../integration.cpp: In function ‘int main()’:
+../integration.cpp:74:16: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   std::cout << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                ^~~~~~~~~
+../integration.cpp:75:11: warning: the address of ‘double hitOrMiss(int)’ will always evaluate as ‘true’ [-Waddress]
+   file << hitOrMiss << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+           ^~~~~~~~~
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:33:21 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:33:23 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+09:33:51 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:33:52 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:34:13 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:34:15 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+09:34:20 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+09:35:00 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:35:02 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+09:35:49 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+09:35:49 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:35:51 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:36:09 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+ ^
+make: *** [importance_sampling.o] Error 1
+09:36:11 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:37:59 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+09:38:01 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:38:14 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:38:35 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:38:46 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+09:38:48 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:39:59 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+ ^
+make: *** [importance_sampling.o] Error 1
+09:40:00 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:40:28 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:40:29 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:40:51 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:40:53 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:41:07 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:41:09 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:41:21 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+09:41:27 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:41:28 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:41:34 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:41:36 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:42:07 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:42:08 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:43:14 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:43:16 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+09:54:13 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:6:19: error: ‘rand’ was not declared in this scope
+   double y = rand();
+                   ^
+../importance_sampling.cpp:7:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+09:54:15 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
