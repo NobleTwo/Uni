@@ -61,12 +61,8 @@ int main(){
 	srand(time(NULL));
 
 	//new file
-	std::ofstream file_sample;
-	file_sample.open("values_sample.txt");
-
-	//same for hit-or-miss
-	std::ofstream file_hOm;
-	file_hOm.open("values_hOm.txt");
+	std::ofstream file;
+	file.open("values.txt");
 	int runsForVariance = 100;
 
 	//loop over numberOfSamples
@@ -114,12 +110,11 @@ int main(){
 		}
 
 		//print and write into file
-		//in order for sample: numberOfSamples - integral sampling method - sampling method max - sampling method min
-		//in order for hit-or-miss: numberOfSamples - integral hit-or-miss - hit or miss min - hit or miss max
+		//in order numberOfSamples - integral sampling method - variance sampling method - integral hit-or-miss - variance hit-or-miss - true value
 		std::cout << numberOfSamples << "\t" << samplingMethod_mean/runsForVariance << "\t" << samplingMethod_max-samplingMethod_min << "\t";
-		file_sample << numberOfSamples << "\t" << samplingMethod_mean/runsForVariance << "\t" << samplingMethod_min << "\t" << samplingMethod_max << std::endl;
+		file << numberOfSamples << "\t" << samplingMethod_mean/runsForVariance << "\t" << samplingMethod_max-samplingMethod_min << "\t";
 		std::cout << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
-		file_hOm << numberOfSamples << "\t" << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_min << "\t" << hitOrMiss_max << std::endl;
+		file << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
 	}
-	file_sample.close();
+	file.close();
 }

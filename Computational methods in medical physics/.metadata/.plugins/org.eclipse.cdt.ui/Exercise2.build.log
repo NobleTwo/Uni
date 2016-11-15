@@ -1,4 +1,4 @@
-09:54:13 **** Incremental Build of configuration Debug for project Exercise2 ****
+07:49:36 **** Incremental Build of configuration Debug for project Exercise2 ****
 make all 
 Building file: ../importance_sampling.cpp
 Invoking: Cross G++ Compiler
@@ -13,7 +13,6 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"
 ../importance_sampling.cpp:6:10: warning: unused variable ‘y’ [-Wunused-variable]
    double y = rand();
           ^
-subdir.mk:18: recipe for target 'importance_sampling.o' failed
 ../importance_sampling.cpp:4:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
   double sum_f_x = 0;
          ^~~~~~~
@@ -21,6 +20,7 @@ subdir.mk:18: recipe for target 'importance_sampling.o' failed
  }
  ^
 make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
 
-09:54:13 Build Finished (took 69ms)
+07:49:37 Build Finished (took 134ms)
 

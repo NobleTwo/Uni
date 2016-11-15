@@ -1,0 +1,4 @@
+set logscale x
+set xlabel "number of samples"
+set ylabel "integral value"
+plot [0.1:][-0.05:1.05] "values_sample.txt" with errorbars lc rgb "red" title "Sampling Method", "values_hOm.txt" with errorbars lc rgb "blue" title "Hit-or-miss-Method", 0.326543 title "True value"
