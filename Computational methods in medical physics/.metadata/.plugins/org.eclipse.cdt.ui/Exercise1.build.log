@@ -1,8 +1,1 @@
-07:49:38 **** Incremental Build of configuration Debug for project Exercise1 ****
-Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
-g++ -o Exercise1 integration.o 
-
-07:49:39 Build Finished (took 840ms)
-
+Info: Nothing to build for Exercise1

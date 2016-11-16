@@ -2282,3 +2282,494 @@ Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on t
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
 g++ -o Exercise1 integration.o 
+Info: Nothing to build for Exercise1
+11:23:54 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:27:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:26:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:24:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:30:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../importance_sampling.cpp: In function ‘int main()’:
+../importance_sampling.cpp:36:16: error: aggregate ‘std::ofstream file_sample’ has incomplete type and cannot be defined
+  std::ofstream file_sample;
+                ^~~~~~~~~~~
+../importance_sampling.cpp:40:16: error: aggregate ‘std::ofstream file_hOm’ has incomplete type and cannot be defined
+  std::ofstream file_hOm;
+                ^~~~~~~~
+../importance_sampling.cpp:74:42: error: ‘hitOrMiss’ was not declared in this scope
+    double hOm = hitOrMiss(numberOfSamples);
+                                          ^
+../importance_sampling.cpp:91:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << numberOfSamples << "\t" << samplingMethod_mean/runsForVariance << "\t" << samplingMethod_max-samplingMethod_min << "\t";
+   ^~~
+../importance_sampling.cpp:92:144: error: ‘endl’ is not a member of ‘std’
+   file_sample << numberOfSamples << "\t" << samplingMethod_mean/runsForVariance << "\t" << samplingMethod_min << "\t" << samplingMethod_max << std::endl;
+                                                                                                                                                ^~~
+../importance_sampling.cpp:93:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+   ^~~
+../importance_sampling.cpp:93:111: error: ‘endl’ is not a member of ‘std’
+   std::cout << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                                                                                                               ^~~
+../importance_sampling.cpp:94:126: error: ‘endl’ is not a member of ‘std’
+   file_hOm << numberOfSamples << "\t" << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_min << "\t" << hitOrMiss_max << std::endl;
+                                                                                                                              ^~~
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+11:24:06 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:27:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:26:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:24:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:30:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../importance_sampling.cpp: In function ‘int main()’:
+../importance_sampling.cpp:36:16: error: aggregate ‘std::ofstream file_sample’ has incomplete type and cannot be defined
+  std::ofstream file_sample;
+                ^~~~~~~~~~~
+../importance_sampling.cpp:40:16: error: aggregate ‘std::ofstream file_hOm’ has incomplete type and cannot be defined
+  std::ofstream file_hOm;
+                ^~~~~~~~
+../importance_sampling.cpp:74:42: error: ‘hitOrMiss’ was not declared in this scope
+    double hOm = hitOrMiss(numberOfSamples);
+                                          ^
+../importance_sampling.cpp:91:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << numberOfSamples << "\t" << samplingMethod_mean/runsForVariance << "\t" << samplingMethod_max-samplingMethod_min << "\t";
+   ^~~
+../importance_sampling.cpp:92:144: error: ‘endl’ is not a member of ‘std’
+   file_sample << numberOfSamples << "\t" << samplingMethod_mean/runsForVariance << "\t" << samplingMethod_min << "\t" << samplingMethod_max << std::endl;
+                                                                                                                                                ^~~
+../importance_sampling.cpp:93:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+   ^~~
+../importance_sampling.cpp:93:111: error: ‘endl’ is not a member of ‘std’
+   std::cout << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+                                                                                                               ^~~
+../importance_sampling.cpp:94:126: error: ‘endl’ is not a member of ‘std’
+   file_hOm << numberOfSamples << "\t" << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_min << "\t" << hitOrMiss_max << std::endl;
+                                                                                                                              ^~~
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+Info: Nothing to build for Exercise1
+11:24:30 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importance_sampled(int)’:
+../importance_sampling.cpp:28:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:27:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:25:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:31:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../importance_sampling.cpp: In function ‘int main()’:
+../importance_sampling.cpp:75:42: error: ‘hitOrMiss’ was not declared in this scope
+    double hOm = hitOrMiss(numberOfSamples);
+                                          ^
+../importance_sampling.cpp:92:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << numberOfSamples << "\t" << samplingMethod_mean/runsForVariance << "\t" << samplingMethod_max-samplingMethod_min << "\t";
+   ^~~
+../importance_sampling.cpp:94:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << hitOrMiss_mean/runsForVariance << "\t" << hitOrMiss_max-hitOrMiss_min << "\t" << "0.326543" << std::endl;
+   ^~~
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+11:31:05 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o integration.o ../integration.cpp 
+g++ -o Exercise1 integration.o 
+11:31:06 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:28:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:27:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:25:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:31:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../importance_sampling.cpp: In function ‘int main()’:
+../importance_sampling.cpp:82:30: error: ‘hOm’ was not declared in this scope
+     importanceSampling_min = hOm;
+                              ^~~
+../importance_sampling.cpp:84:7: error: ‘hOm’ was not declared in this scope
+    if(hOm>hitOrMiss_max){
+       ^~~
+../importance_sampling.cpp:84:11: error: ‘hitOrMiss_max’ was not declared in this scope
+    if(hOm>hitOrMiss_max){
+           ^~~~~~~~~~~~~
+../importance_sampling.cpp:85:5: error: ‘importanceSampling_max’ was not declared in this scope
+     importanceSampling_max = hOm;
+     ^~~~~~~~~~~~~~~~~~~~~~
+../importance_sampling.cpp:92:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << numberOfSamples << "\t" << simpleSampling_mean/runsForVariance << "\t" << simpleSampling_max-simpleSampling_min << "\t";
+   ^~~
+../importance_sampling.cpp:94:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << importanceSampling_mean/runsForVariance << "\t" << importanceSampling_max-importanceSampling_min << "\t" << "0.326543" << std::endl;
+   ^~~
+../importance_sampling.cpp:94:67: error: ‘importanceSampling_max’ was not declared in this scope
+   std::cout << importanceSampling_mean/runsForVariance << "\t" << importanceSampling_max-importanceSampling_min << "\t" << "0.326543" << std::endl;
+                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+../importance_sampling.cpp:56:10: warning: unused variable ‘importanceSamling_max’ [-Wunused-variable]
+   double importanceSamling_max = -DBL_MAX;
+          ^~~~~~~~~~~~~~~~~~~~~
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+Info: Nothing to build for Exercise1
+11:31:17 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:28:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:27:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:25:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:31:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../importance_sampling.cpp: In function ‘int main()’:
+../importance_sampling.cpp:82:30: error: ‘hOm’ was not declared in this scope
+     importanceSampling_min = hOm;
+                              ^~~
+../importance_sampling.cpp:84:7: error: ‘hOm’ was not declared in this scope
+    if(hOm>hitOrMiss_max){
+       ^~~
+../importance_sampling.cpp:84:11: error: ‘hitOrMiss_max’ was not declared in this scope
+    if(hOm>hitOrMiss_max){
+           ^~~~~~~~~~~~~
+../importance_sampling.cpp:85:5: error: ‘importanceSampling_max’ was not declared in this scope
+     importanceSampling_max = hOm;
+     ^~~~~~~~~~~~~~~~~~~~~~
+../importance_sampling.cpp:92:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << numberOfSamples << "\t" << simpleSampling_mean/runsForVariance << "\t" << simpleSampling_max-simpleSampling_min << "\t";
+   ^~~
+../importance_sampling.cpp:94:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << importanceSampling_mean/runsForVariance << "\t" << importanceSampling_max-importanceSampling_min << "\t" << "0.326543" << std::endl;
+   ^~~
+../importance_sampling.cpp:94:67: error: ‘importanceSampling_max’ was not declared in this scope
+   std::cout << importanceSampling_mean/runsForVariance << "\t" << importanceSampling_max-importanceSampling_min << "\t" << "0.326543" << std::endl;
+                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+../importance_sampling.cpp:56:10: warning: unused variable ‘importanceSamling_max’ [-Wunused-variable]
+   double importanceSamling_max = -DBL_MAX;
+          ^~~~~~~~~~~~~~~~~~~~~
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+11:31:52 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:28:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:27:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:25:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:31:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../importance_sampling.cpp: In function ‘int main()’:
+../importance_sampling.cpp:82:30: error: ‘hOm’ was not declared in this scope
+     importanceSampling_min = hOm;
+                              ^~~
+../importance_sampling.cpp:84:7: error: ‘hOm’ was not declared in this scope
+    if(hOm>hitOrMiss_max){
+       ^~~
+../importance_sampling.cpp:84:11: error: ‘hitOrMiss_max’ was not declared in this scope
+    if(hOm>hitOrMiss_max){
+           ^~~~~~~~~~~~~
+../importance_sampling.cpp:85:5: error: ‘importanceSampling_max’ was not declared in this scope
+     importanceSampling_max = hOm;
+     ^~~~~~~~~~~~~~~~~~~~~~
+../importance_sampling.cpp:92:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << numberOfSamples << "\t" << simpleSampling_mean/runsForVariance << "\t" << simpleSampling_max-simpleSampling_min << "\t";
+   ^~~
+../importance_sampling.cpp:94:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << importanceSampling_mean/runsForVariance << "\t" << importanceSampling_max-importanceSampling_min << "\t" << "0.326543" << std::endl;
+   ^~~
+../importance_sampling.cpp:94:67: error: ‘importanceSampling_max’ was not declared in this scope
+   std::cout << importanceSampling_mean/runsForVariance << "\t" << importanceSampling_max-importanceSampling_min << "\t" << "0.326543" << std::endl;
+                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+../importance_sampling.cpp:56:10: warning: unused variable ‘importanceSamling_max’ [-Wunused-variable]
+   double importanceSamling_max = -DBL_MAX;
+          ^~~~~~~~~~~~~~~~~~~~~
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+11:33:43 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:28:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:27:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand();
+          ^
+../importance_sampling.cpp:25:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:31:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../importance_sampling.cpp: In function ‘int main()’:
+../importance_sampling.cpp:82:30: error: ‘hOm’ was not declared in this scope
+     importanceSampling_min = hOm;
+                              ^~~
+../importance_sampling.cpp:84:7: error: ‘hOm’ was not declared in this scope
+    if(hOm>hitOrMiss_max){
+       ^~~
+../importance_sampling.cpp:84:11: error: ‘hitOrMiss_max’ was not declared in this scope
+    if(hOm>hitOrMiss_max){
+           ^~~~~~~~~~~~~
+../importance_sampling.cpp:85:5: error: ‘importanceSampling_max’ was not declared in this scope
+     importanceSampling_max = hOm;
+     ^~~~~~~~~~~~~~~~~~~~~~
+../importance_sampling.cpp:92:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << numberOfSamples << "\t" << simpleSampling_mean/runsForVariance << "\t" << simpleSampling_max-simpleSampling_min << "\t";
+   ^~~
+../importance_sampling.cpp:94:3: error: ‘cout’ is not a member of ‘std’
+   std::cout << importanceSampling_mean/runsForVariance << "\t" << importanceSampling_max-importanceSampling_min << "\t" << "0.326543" << std::endl;
+   ^~~
+../importance_sampling.cpp:94:67: error: ‘importanceSampling_max’ was not declared in this scope
+   std::cout << importanceSampling_mean/runsForVariance << "\t" << importanceSampling_max-importanceSampling_min << "\t" << "0.326543" << std::endl;
+                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+../importance_sampling.cpp:56:10: warning: unused variable ‘importanceSamling_max’ [-Wunused-variable]
+   double importanceSamling_max = -DBL_MAX;
+          ^~~~~~~~~~~~~~~~~~~~~
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+11:51:26 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:36:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:35:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand()/RAND_MAX;
+          ^
+../importance_sampling.cpp:33:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:39:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+11:54:29 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:36:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:35:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand()/RAND_MAX;
+          ^
+../importance_sampling.cpp:33:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:39:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+11:54:50 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:36:19: error: ‘g_1’ was not declared in this scope
+   double x = g_1(x)
+                   ^
+../importance_sampling.cpp:35:10: warning: unused variable ‘y’ [-Wunused-variable]
+   double y = rand()/RAND_MAX;
+          ^
+../importance_sampling.cpp:33:9: warning: unused variable ‘sum_f_x’ [-Wunused-variable]
+  double sum_f_x = 0;
+         ^~~~~~~
+../importance_sampling.cpp:39:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [importance_sampling.o] Error 1
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+Info: Nothing to build for Exercise1
+11:55:15 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+Info: Nothing to build for Exercise1
+11:55:22 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+11:55:25 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+11:55:57 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+11:57:06 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+11:57:21 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+11:57:23 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+11:57:26 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+11:58:09 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+11:58:12 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+11:58:48 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+11:58:50 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+11:58:59 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+Info: Nothing to build for Exercise1
+11:59:05 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+11:59:07 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.

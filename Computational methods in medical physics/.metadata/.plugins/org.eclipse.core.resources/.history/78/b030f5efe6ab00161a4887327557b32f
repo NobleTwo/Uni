@@ -6,7 +6,7 @@
 #include <cfloat>
 
 //computes integral by sampling method
-double simpleSampling(int numberOfSamples){
+double samplingMethod(int numberOfSamples){
 	//lower and upper boundary of interval
 	int a=0;
 	int b=1;
@@ -85,7 +85,7 @@ int main(){
 		//loop over number of runs for variance
 		for(int j=0; j<runsForVariance; j++){
 			//compute integral by sampling method
-			double samp = simpleSampling(numberOfSamples);
+			double samp = samplingMethod(numberOfSamples);
 
 			//add to mean of sampling method (divided by runsForVariance for right result)
 			samplingMethod_mean += samp;

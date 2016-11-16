@@ -32,7 +32,7 @@ double importanceSampling(int numberOfSamples){
 	//I=1/N*sum(f(x)/g(x))
 	double sum_fg = 0;
 	for(int i=0; i<numberOfSamples; i++){
-		double y = double(rand())/RAND_MAX;
+		double y = rand()/RAND_MAX;
 		double x = -log(1-y*(1-1/M_E));
 		sum_fg += exp(-pow(x,2))/(exp(-x));
 	}

@@ -1,12 +1,10 @@
-#include <iostream>
-#include <fstream>
-#include <random>
-#include <ctime>
 #include <cmath>
+#include <random>
 #include <cfloat>
+#include <fstream>
 
 //computes integral by sampling method
-double simpleSampling(int numberOfSamples){
+double samplingMethod(int numberOfSamples){
 	//lower and upper boundary of interval
 	int a=0;
 	int b=1;
@@ -16,45 +14,20 @@ double simpleSampling(int numberOfSamples){
 	for(int i=0; i<numberOfSamples; i++){
 		//get random number in x e [0,1] and compute f(x)
 		double x = double(rand())/RAND_MAX;
-		sum_f_x += pow(cos(1./x),2);
+		sum_f_x += exp(-pow(x,2));
 	}
 
 	//return integral
 	return (b-a)*sum_f_x/numberOfSamples;
 }
 
-//computes integral by hit-or-miss-method
-double hitOrMiss(int numberOfSamples){
-	//lower and upper boundary of interval
-	int a=0;
-	int b=1;
-
-	//maximum value of function in known integral; for better results equal to maximum value of f(x)
-	double max = 1.;
-
-	//value of known integral
-	double I_known = (b-a)*max;
-
-	//number of hits
-	int hit = 0;
+double importance_sampled(int numberOfSamples){
+	double sum_f_x = 0;
 	for(int i=0; i<numberOfSamples; i++){
-		//random number x e [0,1] for computing f(x)
-		double x = double(rand())/RAND_MAX;
-
-		//random number y e [0,max] for comparisuon
-		double y = double(rand())*max/RAND_MAX;
-
-		//compute f(x)
-		double f_x = pow(cos(1./x),2.);
-
-		//compare
-		if(y<= f_x){
-			hit++;
-		}
+		double y = rand();
+		double x = g_1(x)
+		sum_f_x +=
 	}
-
-	//return integral as fraction of known integral
-	return I_known*hit/numberOfSamples;
 }
 
 int main(){
@@ -85,7 +58,7 @@ int main(){
 		//loop over number of runs for variance
 		for(int j=0; j<runsForVariance; j++){
 			//compute integral by sampling method
-			double samp = simpleSampling(numberOfSamples);
+			double samp = samplingMethod(numberOfSamples);
 
 			//add to mean of sampling method (divided by runsForVariance for right result)
 			samplingMethod_mean += samp;
