@@ -2773,3 +2773,243 @@ Finished building target: Exercise2
 11:59:07 **** Incremental Build of configuration Debug for project Exercise2 ****
 make all 
 make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+17:56:12 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+17:56:16 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+17:58:52 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:34:32: error: expected primary-expression before ‘>’ token
+  std::cout << M_E << std::endl;>
+                                ^
+../importance_sampling.cpp:35:2: error: expected primary-expression before ‘for’
+  for(int i=0; i<numberOfSamples; i++){
+  ^~~
+../importance_sampling.cpp:35:15: error: ‘i’ was not declared in this scope
+  for(int i=0; i<numberOfSamples; i++){
+               ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+17:58:54 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+../importance_sampling.cpp: In function ‘double importanceSampling(int)’:
+../importance_sampling.cpp:34:32: error: expected primary-expression before ‘>’ token
+  std::cout << M_E << std::endl;>
+                                ^
+../importance_sampling.cpp:35:2: error: expected primary-expression before ‘for’
+  for(int i=0; i<numberOfSamples; i++){
+  ^~~
+../importance_sampling.cpp:35:15: error: ‘i’ was not declared in this scope
+  for(int i=0; i<numberOfSamples; i++){
+               ^
+subdir.mk:18: recipe for target 'importance_sampling.o' failed
+make: *** [importance_sampling.o] Error 1
+Info: Nothing to build for Exercise1
+17:59:07 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+17:59:11 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:23:32 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+Info: Nothing to build for Exercise1
+18:23:36 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:23:38 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:30:55 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:30:58 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:31:21 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:31:23 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:32:08 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:32:12 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:33:23 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:33:26 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:34:31 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:34:33 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:34:59 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:35:02 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:35:31 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:35:34 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:43:05 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:43:07 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.
+Info: Nothing to build for Exercise1
+18:43:50 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../importance_sampling.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"importance_sampling.d" -MT"importance_sampling.o" -o "importance_sampling.o" "../importance_sampling.cpp"
+Finished building: ../importance_sampling.cpp
+ 
+Building target: Exercise2
+Invoking: Cross G++ Linker
+g++  -o "Exercise2"  ./importance_sampling.o   
+Finished building target: Exercise2
+ 
+18:43:51 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+make: Nothing to be done for 'all'.

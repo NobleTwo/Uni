@@ -33,8 +33,8 @@ double importanceSampling(int numberOfSamples){
 	double sum_fg = 0;
 	for(int i=0; i<numberOfSamples; i++){
 		double y = double(rand())/RAND_MAX;
-		double x = -log(1-y*(1-exp(-1)));
-		sum_fg += exp(-pow(x,2))/(exp(-x)*1/(1-exp(-1)));
+		double x = -log(1-y*(1-1/M_E));
+		sum_fg += exp(-pow(x,2))/(exp(-x));
 	}
 	return sum_fg/numberOfSamples;
 }
@@ -44,11 +44,11 @@ int main(){
 
 	//new file
 	std::ofstream file_simple;
-	file_simple.open("values_simple.txt");
+	file_simple.open("values_sample.txt");
 
 	//same for hit-or-miss
 	std::ofstream file_importance;
-	file_importance.open("values_importance.txt");
+	file_importance.open("values_hOm.txt");
 	int runsForVariance = 100;
 
 	//loop over numberOfSamples

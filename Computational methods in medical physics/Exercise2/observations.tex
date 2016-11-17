@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\begin{document}
+\section{Preparations}
+	\begin{eqnarray*}
+		f(x)&=&e^{-x^2}\\
+		g(x)&=&c\cdot e^{-x}\\
+		x &\epsilon& [0,1]
+	\end{eqnarray*}
+	normalization:
+	\begin{eqnarray*}
+		1&=&\int_0^1 \mathrm{dx}g(x)\\
+		&=&c\cdot\int_0^1 \mathrm{dx}e^{-x}\\
+		&=&c\cdot\left[-e^{-x}\right]_0^1\\
+		&=&c\left(-\frac{1}{e}+1\right)\\
+		c&=&\frac{1}{1-e^{-1}}
+	\end{eqnarray*}
+	integration:
+	\begin{eqnarray*}
+		G(x)&=&\int_0^x\mathrm{dx'}g(x')\\
+		&=&c\int_0^x\mathrm{dx'}e^{-x'}\\				&=&\frac{1}{1-e^{-1}}\cdot\left[-e^{-x'}\right]_0^x\\
+		y&=&\frac{1-e^{-x}}{1-e^{-1}}
+	\end{eqnarray*}
+	boundaries of $G(x)$:
+	\begin{eqnarray*}
+		G(0)&=&0\\
+		G(1)&=&1
+	\end{eqnarray*}
+	getting x again:
+	\begin{eqnarray*}
+		y(1-e^{-1})&=&1-e^{-x}\\
+		1-y(1-e^{-1})&=&e^{-x}\\
+		\ln(1-y(1-e^{-1}))&=&-x\\
+		x&=&-\ln(1-y(1-e^{-1}))
+	\end{eqnarray*}
+\end{document}

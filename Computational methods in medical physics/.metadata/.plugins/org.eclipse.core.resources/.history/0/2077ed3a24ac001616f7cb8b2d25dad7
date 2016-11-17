@@ -52,7 +52,7 @@ int main(){
 	int runsForVariance = 100;
 
 	//loop over numberOfSamples
-	for(int i=0; i<6; i++){
+	for(int i=0; i<1; i++){
 		int numberOfSamples = pow(10,i);
 
 		//initilaize mean, min and max value for both methods

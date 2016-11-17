@@ -34,7 +34,8 @@ double importanceSampling(int numberOfSamples){
 	for(int i=0; i<numberOfSamples; i++){
 		double y = double(rand())/RAND_MAX;
 		double x = -log(1-y*(1-exp(-1)));
-		sum_fg += exp(-pow(x,2))/(exp(-x)*1/(1-exp(-1)));
+		std::cout << x << std::endl;
+		sum_fg += exp(-pow(x,2))/exp(-x);
 	}
 	return sum_fg/numberOfSamples;
 }
@@ -52,7 +53,7 @@ int main(){
 	int runsForVariance = 100;
 
 	//loop over numberOfSamples
-	for(int i=0; i<6; i++){
+	for(int i=0; i<1; i++){
 		int numberOfSamples = pow(10,i);
 
 		//initilaize mean, min and max value for both methods
