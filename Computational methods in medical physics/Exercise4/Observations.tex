@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\begin{document}
+	\section{Mathematical preparations}
+	\subsection{f(x)}
+		pdf
+		\begin{eqnarray*}
+			f(x)&=&e^{-x}\\
+			x&\epsilon&(0,\infty)
+		\end{eqnarray*}
+		normalization:
+		\begin{eqnarray*}
+			\int_0^\infty f(x)\mathrm{dx}&=&\int_0^\infty e^{-x}\mathrm{dx}\\
+			&=&-e^{-x}|_0^\infty\\
+			&=&1
+		\end{eqnarray*}
+		cdf
+		\begin{eqnarray*}
+			F(x)&=&\int_0^x f(t)\mathrm{dt}\\
+			&=&\int_0^x e^{-t}\mathrm{dt}\\
+			&=&-e^{-t}|_0^x\\
+			&=&-e^{-x}+1
+		\end{eqnarray*}
+		invert:
+		\begin{eqnarray*}
+			y&=&-e^{-x}+1\\
+			\ln(1-y)&=&-x\\
+			F^{-1}(y)&=&-\ln(1-y)=x
+		\end{eqnarray*}
+	\subsection{g(x)}
+		pdf
+		\begin{eqnarray*}
+			g(x)&=&x\cdot e^{-\frac{x^2}{\alpha^2}}, \hspace{0.5cm}\alpha=25^\circ\\
+			x&\epsilon&[0^\circ,180^\circ]
+		\end{eqnarray*}
+		normalization:
+		\begin{eqnarray*}
+			\int_{0^\circ}^{180^\circ}g(x)\mathrm{dx}&=&\int_{0^\circ}^{180^\circ}x\cdot e^{-\frac{x^2}{\alpha^2}}\mathrm{dx}\\
+		\end{eqnarray*}
+		substitute $\frac{x^2}{\alpha^2}=:b$, $x\cdot dx=\frac{\alpha^2}{2} db$
+		\begin{eqnarray*}
+			\int_{0^\circ}^{180^\circ}g(x)\mathrm{dx}&=&\frac{\alpha^2}{2}\int_{0^\circ}^{(180^\circ/\alpha)^2}e^{-b}\mathrm{db}\\
+			&=&-\frac{\alpha^2}{2}\left[e^{-b}\right]_0^{(180^\circ/\alpha)^2}\\
+			&\approx&\frac{\alpha^2}{2}
+		\end{eqnarray*}
+		redefine g(x):
+		\begin{eqnarray*}
+			g(x)&=&\frac{2}{\alpha^2}x\cdot e^{-\frac{x^2}{625^\circ}}
+		\end{eqnarray*}
+		cdf
+		\begin{eqnarray*}
+			G(x)&=&\int_0^x g(t)\mathrm{dt}\\
+			&=&\frac{2}{\alpha^2}\int_0^x e^{-\frac{				t^2}{625^\circ}}\mathrm{dt}
+		\end{eqnarray*}
+		substitute $\frac{t^2}{\alpha^2}=:c$, $dt=\frac{\alpha^2}{2} dc$
+		\begin{eqnarray*}
+			G(x)&=&\int_0^{x^2/\alpha^2} e^{-c}\mathrm{dc}\\
+			&=&-\left[e^{-c}\right]_0^{x^2/\alpha^2}\\
+			&=&-e^{-x^2/\alpha^2}+1
+		\end{eqnarray*}
+		invert
+		\begin{eqnarray*}
+			y&=&-e^{-x^2/\alpha^2}+1\\
+			\ln(1-y)&=&-\frac{x^2}{\alpha^2}\\
+			x&=&\pm\alpha\sqrt{-\ln(1-y)}\\
+			G^{-1}(y)&=&\pm\alpha\sqrt{-\ln(1-y)}
+		\end{eqnarray*}
+	\section{Computational Setup}
+		For implementing the scattering of particles computed by a Monte Carlo method, 6 non-main methods were coded in addition to the main method.\\
+		The main-method is used only for initializing the random seed and starting the needed simulation.\\
+		For simulating, to different methods were implemented: simulate\_stat() is used for getting the statistic properties of the scattering processes and therefore needs a number of particles that are computed. simulate\_path() computes the path of 5 particles and saves it.\\
+		The process for simulating a particle path is the same in both methods: The path is computed by getPath(), if the particle becomes absorbed by becomesAbsorbed() and if it wasn't absorbed the scattering angle by getAngle().\\
+		After computation the statistics are saved using write().\\
+		
+		When computing the path-length, the x-axis is spread by factor 10 to ensure greater accuracy. Therefore, the number of events for a certain path length has to be increased by factor 10 when being compared with f(x).\\
+		When computing the scattering angle, via a random number the decision for scattering in positive or negative y-direction is made. Due to this, only half of the expected (by g(x)) particles are measured with a certain scattering angle. Therefore, the statistics are not being compared to g(x) but to $|\frac{g(x)}{2}|$.
+	\section{Observations}
+	\subsection{Trajectories}
+		The particle trajectories show that the particles become absorbed rather quickly. None of the displayed trajectories enters further into the medium than 6[mm].
+	\subsection{Path length}
+		The path length distribution fits f(x) nicely. As expected, the variance between f(x) and the simulated distribution decreases with increasing number of simulated particles.\\
+		A bit strange is the behaviour of the path length for $r=0$: Here, the measured number of particles stay way below (at about half) the expected value. This holds for all tested number of particles.
+	\subsection{Absorption ratio}
+		The measured absorption ratio is about the exact value of 0.2. With increasing number of particles, again, the variance between expectation and measured values decreases.
+	\subsection{Scattering angle}
+		The measured scattering angle is distributed almost exactly as given by g(x). As in the above cases, the variance between measurement and expectation decreases with increasing number of sampled particles.
+	\subsection{Detector at x=1 and x=5}
+		For a detector at x=1 or x=5, a large maximum appears at $y=0$ and two side-maxima at $y\approx\pm0.25$. This effect probably takes place because most events occur directly after inserting the particle at (0/0) with movement exactly along the x-axis. The side-maxima appear due to scattering processes and are therefore distributed as $g(x)$.\\
+		The scheme of maxima and side-maxima is clearer to be seen when the number of simulated particles is increased.\\
+		It is no surprise that there are more events detected in a detector at x=1 than at x=5 (for $N=100$ even no event at all was registered at x=5) since the second detector is further away from the point of insertion.
+\end{document}
